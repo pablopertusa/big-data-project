@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Complete downloaded source files (regenerate with the CLI).
+/data/raw/
+/data/mitma/
+*.part
+/data/.download.lock
+/data/tmp*/

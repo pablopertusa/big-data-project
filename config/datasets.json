@@ -1,0 +1,64 @@
+{
+  "catalog_version": 1,
+  "profile": {
+    "name": "schema-one-day-2023",
+    "start": "2023-03-06",
+    "end": "2023-03-06",
+    "levels": ["municipios"]
+  },
+  "mitma_base": "https://mitma-movilidad-v2.s3.eu-west-1.amazonaws.com",
+  "geography": [
+    {"level": "distritos", "folder": "zonificacion_distritos", "stem": "zonificacion_distritos", "names": "nombres_distritos.csv"},
+    {"level": "municipios", "folder": "zonificacion_municipios", "stem": "zonificacion_municipios", "names": "nombres_municipios.csv"},
+    {"level": "GAU", "folder": "zonificacion_GAU", "stem": "zonificacion_gaus", "names": "nombres_gaus.csv"}
+  ],
+  "static_assets": [
+    {
+      "id": "mitma_ine_crosswalk",
+      "group": "geography",
+      "source": "mitma",
+      "url": "https://mitma-movilidad-v2.s3.eu-west-1.amazonaws.com/zonificacion/relacion_ine_zonificacionMitma.csv",
+      "landing_page": "https://movilidad-opendata.mitma.es/index.html",
+      "reason": "Correspondencia explícita de secciones, distritos y municipios INE con las tres zonificaciones MITMA. No unir por nombre ni asumir igualdad de códigos."
+    },
+    {
+      "id": "ine_population_sections_araba_65042",
+      "group": "population",
+      "source": "ine",
+      "url": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/65042.csv",
+      "landing_page": "https://www.ine.es/jaxiT3/Tabla.htm?t=65042",
+      "reason": "Censo anual: población por sexo y edad quinquenal en secciones de Araba/Álava. Cobertura acotada que permite ensayar agregaciones a distrito, municipio y GAU mediante el crosswalk."
+    },
+    {
+      "id": "ine_gdp_provinces_76926",
+      "group": "economy",
+      "source": "ine",
+      "url": "https://www.ine.es/jaxiPx/files/tpx/es/csv_bdsc/76926.csv",
+      "landing_page": "https://www.ine.es/jaxi/Tabla.htm?L=0&tpx=76926",
+      "reason": "Contabilidad Regional, revisión 2024, serie provincial 2000–2023: PIB/VAB por rama, miles de euros. Satisface el contexto NUTS-3 sin inventar PIB municipal; preservar 2023(P)."
+    },
+    {
+      "id": "ine_income_30824",
+      "group": "economy",
+      "source": "ine",
+      "url": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/30824.csv",
+      "landing_page": "https://www.ine.es/jaxiT3/Tabla.htm?t=30824",
+      "optional": true,
+      "reason": "Atlas de distribución de renta: ampliación opcional, excluida del subset inicial por volumen. Solo archivo completo. Renta residencial no equivale a actividad económica de destino."
+    },
+    {
+      "id": "mitma_indicator_dictionary",
+      "group": "documentation",
+      "source": "mitma",
+      "url": "https://mitma-movilidad-v2.s3.eu-west-1.amazonaws.com/LEEME_Especificaciones_indicadores_OpenDataMovilidad.xlsx",
+      "reason": "Diccionario oficial actual para interpretar campos y categorías; conservar fecha de recuperación, pues puede revisarse."
+    },
+    {
+      "id": "mitma_license",
+      "group": "documentation",
+      "source": "mitma",
+      "url": "https://mitma-movilidad-v2.s3.eu-west-1.amazonaws.com/LICENCIA%20de%20datos%20abiertos%20del%20MITMA%2020201203.pdf",
+      "reason": "Conservar las condiciones oficiales de reutilización y atribución."
+    }
+  ]
+}
