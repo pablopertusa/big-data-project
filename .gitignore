@@ -15,3 +15,7 @@ wheels/
 *.part
 /data/.download.lock
 /data/tmp*/
+
+# Base local y temporales regenerables de los notebooks.
+/data/processed/
+**/.ipynb_checkpoints/

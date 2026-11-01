@@ -10,3 +10,8 @@ dependencies = [
     "pandas>=3.1.0",
     "polars>=2.1.0",
 ]
+
+[dependency-groups]
+dev = [
+    "nbclient>=0.10.0",
+]
