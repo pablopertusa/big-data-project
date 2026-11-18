@@ -8,6 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+.env
 
 # Complete downloaded source files (regenerate with the CLI).
 /data/raw/
@@ -16,6 +17,6 @@ wheels/
 /data/.download.lock
 /data/tmp*/
 
-# Base local y temporales regenerables de los notebooks.
-/data/processed/
+/data
 **/.ipynb_checkpoints/
+/blobs

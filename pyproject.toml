@@ -5,7 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "cdsapi>=0.7.7",
     "duckdb>=2.0.0",
+    "folium>=0.20.0",
+    "geopandas>=1.2.0",
     "ipykernel>=7.4.0",
     "pandas>=3.1.0",
     "polars>=2.1.0",
