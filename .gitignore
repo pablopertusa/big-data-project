@@ -17,6 +17,9 @@ wheels/
 /data/.download.lock
 /data/tmp*/
 
-/data
+/data/
+!/data/ine/
+/data/ine/*
+!/data/ine/provincias_ccaa.csv
 **/.ipynb_checkpoints/
 /blobs
