@@ -18,6 +18,7 @@ wheels/
 /data/tmp*/
 
 /data/
+data.zip
 !/data/ine/
 /data/ine/*
 !/data/ine/provincias_ccaa.csv

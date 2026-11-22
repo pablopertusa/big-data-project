@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 BASE_URL = "https://mitma-movilidad-v2.s3.eu-west-1.amazonaws.com"
 DEFAULT_OUTPUT = Path(__file__).resolve().parents[1] / "data" / "mitma"
 LEVELS = ("distritos", "municipios", "GAU")
-INDICATORS = {"viajes": "Viajes", "pernoctaciones": "Pernoctaciones", "personas": "Personas_dia"}
+INDICATORS = {"viajes": "Viajes", "pernoctaciones": "Pernoctaciones"}
 DOCUMENTS = (
     "LEEME_Especificaciones_indicadores_OpenDataMovilidad.xlsx",
     "LICENCIA de datos abiertos del MITMA 20201203.pdf",
